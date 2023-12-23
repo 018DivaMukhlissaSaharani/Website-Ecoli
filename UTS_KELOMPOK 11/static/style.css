@@ -1,0 +1,60 @@
+/* CSS untuk mengatur tampilan halaman web */
+body {
+  background-image: url(ecoli.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0; /* Warna latar belakang halaman */
+}
+
+.container {
+  border: 2px solid #fff; /* Border berwarna putih */
+  padding: 20px;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff; /* Warna latar belakang container */
+}
+
+.login {
+  flex: 1; /* Menggunakan ruang fleksibel sehingga class "login" mengisi sebagian besar lebar container */
+  padding: 20px;
+}
+
+ul {
+  flex: 1; /* Menggunakan ruang fleksibel untuk class "ul" sehingga berada di sebelah kanan "login" */
+  list-style: none;
+  padding: flex;
+  max-width: 300px;
+}
+
+/* Kustomisasi tampilan form input dan tombol */
+input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Warna latar belakang tombol */
+  color: #fff; /* Warna teks tombol */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Kustomisasi teks judul */
+h1 {
+  font-size: 24px;
+}
+
+.pred {
+  justify-content: center;
+}

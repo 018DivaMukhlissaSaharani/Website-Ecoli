@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glass DT</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login">
+        <h1>EColi Dataset Prediction</h1>
+
+        <!-- Main Input For Receiving Query To Our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+
+          <input type="text" name="mcg" placeholder="mcg" required="required" />
+
+          <input type="text" name="gvh" placeholder="gvh" required="required" />
+
+          <input type="text" name="lip" placeholder="lip" required="required" />
+
+          <input type="text" name="chg" placeholder="chg" required="required" />
+
+          <input type="text" name="aac" placeholder="aac" required="required" />
+
+          <input
+            type="text"
+            name="alm1"
+            placeholder="alm1"
+            required="required"
+          />
+
+          <input
+            type="text"
+            name="alm2"
+            placeholder="alm2"
+            required="required"
+          />
+
+          <button type="submit">Predict</button>
+        </form>
+        <br />
+        <div class="pred">{{ prediction_text }}</div>
+      </div>
+      <ul>
+        <h1>Atribut Informasi</h1>
+        <li>mcg: McMaster-Guerin Collection</li>
+        <li>gvh: Guinea Pig Virulence and HeLa</li>
+        <li>lip: Large Intestine Pig</li>
+        <li>chg: Chick Gall Bladder</li>
+        <li>aac: Avian Adherent E. coli</li>
+        <li>alm1: Score of the ALOM membrane spanning region prediction program</li>
+        <li>alm2: Score of ALOM program after excluding putative cleavable signal</li>
+      </ul>
+    </div>
+  </body>
+</html>
